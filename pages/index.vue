@@ -8,14 +8,14 @@
     </div>
 
     <div class="grid grid-cols-3 sm:grid-cols-5 md:grid-cols-6 lg:grid-cols-10 gap-4">
-      <div class="bg-gray-100 rounded p-2"
+      <div class="bg-gray-100 rounded p-2 cursor-pointer hover:shadow-lg"
            v-for="icon in filteredIcons"
           :key="icon.id"
           :data-tags="icon.tags">
         <div class="p-4">
           <img :alt="`${icon.name} icon`" :src="`/icons/${icon.svg}`" />
         </div>
-        <div class="text-center text-sm" :title="icon.tags">{{ icon.name }}</div>
+        <div class="text-center text-xs" :title="icon.tags">{{ icon.name }}</div>
       </div>
     </div>
   </div>
